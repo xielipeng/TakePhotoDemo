@@ -7,7 +7,8 @@
 2. 调用以下方法
 ```java
 popup(MainActivity.this, 5, false, true);
-3、调用Takephpto提供的以下方法获取选择的图片
+```
+3. 调用Takephpto提供的以下方法获取选择的图片
 ```java
     @Override
     public void takeCancel() {
@@ -24,3 +25,4 @@ popup(MainActivity.this, 5, false, true);
         super.takeSuccess(result);
         // 
     }
+```
