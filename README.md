@@ -6,13 +6,13 @@
 1. 继承 CustomTakePhotoActivity (在Fragment下使用继承相应的Fragment，目前没有实现，你可以自己新建一个CustomTakePhotoFragment)
 2. 调用以下方法
 ```java
-     /**
-     * 
-     * @param context
-     * @param limit 图片张数
-     * @param isCrop 是否裁剪
-     * @param isCompress 是否压缩
-     */
+/**
+* 
+* @param context
+* @param limit 图片张数
+* @param isCrop 是否裁剪
+* @param isCompress 是否压缩
+*/
 popup(MainActivity.this, 5, false, true);
 ```
 3. 调用Takephpto提供的以下方法获取选择的图片
