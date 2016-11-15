@@ -4,7 +4,6 @@ import android.animation.Animator;
 import android.os.Bundle;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 
@@ -69,9 +68,7 @@ public class MainActivity extends CustomTakePhotoActivity implements View.OnClic
     @Override
     public void takeSuccess(TResult result) {
         super.takeSuccess(result);
-        Log.d(TAG, "takeSuccess: " + result.getImages().toString());
         mImgs = result.getImages();
-        Log.d(TAG, "takeSuccess: " + mImgs.size());
 
         mAdapter = new ImgAdapter(R.layout.recyclerview_item_image, mImgs);
         mRecyclerView.setAdapter(mAdapter);
@@ -92,14 +89,14 @@ public class MainActivity extends CustomTakePhotoActivity implements View.OnClic
 
         @Override
         protected void convert(BaseViewHolder holder, TImage item) {
-            Log.d(TAG, "convert: " + item.getPath());
             ImageView imageView = holder.getView(R.id.iv_image);
             if (imageView != null) {
-                Log.d(TAG, "convert: image...");
-                Glide.with(MyAppliction.getInstance()).load(item.getPath())
+                Glide.with(MyAppliction.getInstance())
+                        .load(item.getPath())
                         .error(R.mipmap.ic_launcher)
                         .into(imageView);
             }
         }
     }
+
 }

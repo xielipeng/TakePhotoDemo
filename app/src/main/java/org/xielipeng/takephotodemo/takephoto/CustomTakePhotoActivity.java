@@ -36,6 +36,13 @@ public class CustomTakePhotoActivity extends TakePhotoActivity {
     protected boolean isCrop; // 是否压缩
     protected boolean isCompress; // 是否裁剪
 
+    /**
+     *
+     * @param context
+     * @param limit 图片张数
+     * @param isCrop 是否裁剪
+     * @param isCompress 是否压缩
+     */
     protected void popup(Context context, int limit, boolean isCrop, boolean isCompress) {
         this.limit = limit;
         this.isCrop = isCrop;
